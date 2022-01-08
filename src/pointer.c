@@ -1,6 +1,16 @@
 // int arr[] = {1,2,3}
 // int *p = arr;
 // arr[0] == *(arr+0) == p[0] == *(p+0) 
+
+void testPointer() {
+  
+  // int *p = 3; 编译器会直接报错
+  int a = 10;
+  int* p = &a;// int* 是类型
+  *p = 20; // 这个时候赋值没问题
+
+}
+
 void printAddress() {
   // int a = 10;
   // printf("%p\n", &a);
