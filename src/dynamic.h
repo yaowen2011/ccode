@@ -4,6 +4,9 @@ struct DynamicArray {
   int m_capacity; // 当前容量
   int m_size; // 已经占有的size
 };
-struct DynamicArray * init_DynamicArray(int capacity);
-void insert_DynamicArray(struct DynamicArray * array, int pos, void *data);
-void foreach_DynamicArray();
+struct DynamicArray *init_DynamicArray(int capacity);
+void insert_DynamicArray(struct DynamicArray *array, int pos, void *data);
+void remove_DynamicArray(struct DynamicArray *array, int pos);
+void destroy_DynamicArray(struct DynamicArray *array);
+
+void test_DynamicArray();
