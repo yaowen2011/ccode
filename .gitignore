@@ -1,0 +1,21 @@
+# C 项目 .gitignore
+
+# 可执行文件
+student_manager
+demo
+
+# 对象文件
+*.o
+
+# 数据文件
+students.txt
+
+# 临时文件
+*~
+
+# IDE 文件（可选）
+.vscode/
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
