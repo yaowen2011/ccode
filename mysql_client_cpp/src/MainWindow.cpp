@@ -177,9 +177,10 @@ void MainWindow::setupSplitter()
     m_mainSplitter->addWidget(m_databaseTree);
     m_mainSplitter->addWidget(rightWidget);
 
-    // 设置初始分割比例（左侧 30%，右侧 70%）
-    m_mainSplitter->setStretchFactor(0, 3);
-    m_mainSplitter->setStretchFactor(1, 7);
+    // 设置初始分割比例（左侧 1/5，右侧 4/5）
+    m_mainSplitter->setSizes({240, 960});  // 总宽 1200，左侧 240(20%)，右侧 960(80%)
+    m_mainSplitter->setStretchFactor(0, 1);
+    m_mainSplitter->setStretchFactor(1, 4);
 }
 
 /**
@@ -189,7 +190,8 @@ void MainWindow::setupDatabaseTree()
 {
     m_databaseTree = new QTreeWidget(this);
     m_databaseTree->setHeaderLabels(QStringList() << "数据库对象");
-    m_databaseTree->setMinimumWidth(250);
+    m_databaseTree->setMinimumWidth(150);
+    m_databaseTree->setMaximumWidth(300);  // 设置最大宽度为 300
 
     // 设置右键菜单
     m_databaseTree->setContextMenuPolicy(Qt::CustomContextMenu);
